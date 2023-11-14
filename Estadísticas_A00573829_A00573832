@@ -1,0 +1,36 @@
+#https://replit.com/join/nlbfqrkysu-danielgonzal232
+
+animales = input("¿Hay animales para registrar? (si o no): ").lower()
+
+Menor_a_2_años = 0
+Ente_2_y_menor_a_5_años = 0
+Entre_5_y_menor_a_10_años = 0
+Mayor_o_igual_a_10_años = 0
+ta = 0
+
+while animales == "si":
+    ed = int(input("¿Qué edad tiene el animal?: "))
+
+    if ed < 2:
+        Menor_a_2_años += 1
+    elif 2 <= ed < 5:
+        Ente_2_y_menor_a_5_años += 1
+    elif 5 <= ed < 10:
+        Entre_5_y_menor_a_10_años += 1
+    elif ed >= 10:
+        Mayor_o_igual_a_10_años += 1
+
+    ta += 1
+    animales = input("¿Hay más animales para registrar? (si o no): ").lower()
+
+if ta > 0:
+    p_menor_a_2 = (Menor_a_2_años / ta) * 100
+    p_entre_2_y_5 = (Ente_2_y_menor_a_5_años / ta) * 100
+    p_entre_5_y_10 = (Entre_5_y_menor_a_10_años / ta) * 100
+    p_mayor_o_igual_a_10 = (Mayor_o_igual_a_10_años / ta) * 100
+
+    print(f"Número de animales registrados: {ta}")  
+    print(f"Menor a 2 años: {Menor_a_2_años} ({p_menor_a_2}% del total)")
+    print(f"Entre 2 y 5 años: {Ente_2_y_menor_a_5_años} ({p_entre_2_y_5}% del total)")
+    print(f"Entre 5 y 10 años: {Entre_5_y_menor_a_10_años} ({p_entre_5_y_10}% del total)")
+    print(f"Mayor o igual a 10 años: {Mayor_o_igual_a_10_años} ({p_mayor_o_igual_a_10}% del total)")

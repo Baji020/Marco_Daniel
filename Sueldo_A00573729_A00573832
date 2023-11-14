@@ -1,0 +1,26 @@
+#https://replit.com/join/pqasysygfg-danielgonzal232
+
+vr = float(input("Dame el número de ventas realizadas: "))
+
+if vr < 3500:
+      comision = 0.07
+
+elif 3500 <= vr <= 7000:
+      comision = 0.1
+
+elif vr > 7000:
+      comision = 0.15
+
+while True:
+      ov = input("¿Hay algún otro vendedor? (si o no) ").lower()
+
+      if ov == "no":
+          break
+
+      nv = input("¿Cuál es el nombre del vendedor? ")
+      sb = float(input("¿Cuál es el salario base? "))
+      vt = float(input("Dame el total de ventas: "))
+
+      sueldo_total = sb +  comision
+
+      print(f"{nv} tiene un salario base de {sb} y un total de ventas de {vt}. Su sueldo total es: {sueldo_total}")
